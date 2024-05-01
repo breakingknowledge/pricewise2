@@ -59,6 +59,7 @@ class NodeExtension extends AbstractExtension
         return (bool) ($this->flags & $flag);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
@@ -74,6 +75,20 @@ class NodeExtension extends AbstractExtension
             'Class' => [$this, 'translateClass'],
             'Hash' => [$this, 'translateHash'],
             'Element' => [$this, 'translateElement'],
+=======
+    public function getNodeTranslators(): array
+    {
+        return [
+            'Selector' => $this->translateSelector(...),
+            'CombinedSelector' => $this->translateCombinedSelector(...),
+            'Negation' => $this->translateNegation(...),
+            'Function' => $this->translateFunction(...),
+            'Pseudo' => $this->translatePseudo(...),
+            'Attribute' => $this->translateAttribute(...),
+            'Class' => $this->translateClass(...),
+            'Hash' => $this->translateHash(...),
+            'Element' => $this->translateElement(...),
+>>>>>>> refs/remotes/origin/devasmin
         ];
     }
 
@@ -182,9 +197,12 @@ class NodeExtension extends AbstractExtension
         return $xpath;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> refs/remotes/origin/devasmin
     public function getName(): string
     {
         return 'node';

@@ -23,9 +23,15 @@ namespace Symfony\Component\CssSelector\Node;
  */
 class CombinedSelectorNode extends AbstractNode
 {
+<<<<<<< HEAD
     private $selector;
     private string $combinator;
     private $subSelector;
+=======
+    private NodeInterface $selector;
+    private string $combinator;
+    private NodeInterface $subSelector;
+>>>>>>> refs/remotes/origin/devasmin
 
     public function __construct(NodeInterface $selector, string $combinator, NodeInterface $subSelector)
     {
@@ -49,9 +55,12 @@ class CombinedSelectorNode extends AbstractNode
         return $this->subSelector;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> refs/remotes/origin/devasmin
     public function getSpecificity(): Specificity
     {
         return $this->selector->getSpecificity()->plus($this->subSelector->getSpecificity());

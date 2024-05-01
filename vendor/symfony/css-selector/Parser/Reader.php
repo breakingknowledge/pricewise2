@@ -53,7 +53,14 @@ class Reader
         return substr($this->source, $this->position + $offset, $length);
     }
 
+<<<<<<< HEAD
     public function getOffset(string $string)
+=======
+    /**
+     * @return int|false
+     */
+    public function getOffset(string $string): int|bool
+>>>>>>> refs/remotes/origin/devasmin
     {
         $position = strpos($this->source, $string, $this->position);
 
@@ -71,12 +78,20 @@ class Reader
         return false;
     }
 
+<<<<<<< HEAD
     public function moveForward(int $length)
+=======
+    public function moveForward(int $length): void
+>>>>>>> refs/remotes/origin/devasmin
     {
         $this->position += $length;
     }
 
+<<<<<<< HEAD
     public function moveToEnd()
+=======
+    public function moveToEnd(): void
+>>>>>>> refs/remotes/origin/devasmin
     {
         $this->position = $this->length;
     }

@@ -25,7 +25,11 @@ use Symfony\Component\CssSelector\Parser\Token;
  */
 class FunctionNode extends AbstractNode
 {
+<<<<<<< HEAD
     private $selector;
+=======
+    private NodeInterface $selector;
+>>>>>>> refs/remotes/origin/devasmin
     private string $name;
     private array $arguments;
 
@@ -57,9 +61,12 @@ class FunctionNode extends AbstractNode
         return $this->arguments;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> refs/remotes/origin/devasmin
     public function getSpecificity(): Specificity
     {
         return $this->selector->getSpecificity()->plus(new Specificity(0, 1, 0));
@@ -67,9 +74,13 @@ class FunctionNode extends AbstractNode
 
     public function __toString(): string
     {
+<<<<<<< HEAD
         $arguments = implode(', ', array_map(function (Token $token) {
             return "'".$token->getValue()."'";
         }, $this->arguments));
+=======
+        $arguments = implode(', ', array_map(fn (Token $token) => "'".$token->getValue()."'", $this->arguments));
+>>>>>>> refs/remotes/origin/devasmin
 
         return sprintf('%s[%s:%s(%s)]', $this->getNodeName(), $this->selector, $this->name, $arguments ? '['.$arguments.']' : '');
     }

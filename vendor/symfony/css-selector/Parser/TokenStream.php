@@ -37,7 +37,11 @@ class TokenStream
     private array $used = [];
 
     private int $cursor = 0;
+<<<<<<< HEAD
     private $peeked;
+=======
+    private ?Token $peeked;
+>>>>>>> refs/remotes/origin/devasmin
     private bool $peeking = false;
 
     /**
@@ -145,7 +149,11 @@ class TokenStream
     /**
      * Skips next whitespace if any.
      */
+<<<<<<< HEAD
     public function skipWhitespace()
+=======
+    public function skipWhitespace(): void
+>>>>>>> refs/remotes/origin/devasmin
     {
         $peek = $this->getPeek();
 

@@ -23,7 +23,11 @@ namespace Symfony\Component\CssSelector\Node;
  */
 class PseudoNode extends AbstractNode
 {
+<<<<<<< HEAD
     private $selector;
+=======
+    private NodeInterface $selector;
+>>>>>>> refs/remotes/origin/devasmin
     private string $identifier;
 
     public function __construct(NodeInterface $selector, string $identifier)
@@ -42,9 +46,12 @@ class PseudoNode extends AbstractNode
         return $this->identifier;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> refs/remotes/origin/devasmin
     public function getSpecificity(): Specificity
     {
         return $this->selector->getSpecificity()->plus(new Specificity(0, 1, 0));

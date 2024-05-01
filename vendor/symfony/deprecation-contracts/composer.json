@@ -15,7 +15,11 @@
         }
     ],
     "require": {
+<<<<<<< HEAD
         "php": ">=8.0.2"
+=======
+        "php": ">=8.1"
+>>>>>>> refs/remotes/origin/devasmin
     },
     "autoload": {
         "files": [
@@ -25,7 +29,11 @@
     "minimum-stability": "dev",
     "extra": {
         "branch-alias": {
+<<<<<<< HEAD
             "dev-main": "3.0-dev"
+=======
+            "dev-main": "3.4-dev"
+>>>>>>> refs/remotes/origin/devasmin
         },
         "thanks": {
             "name": "symfony/contracts",

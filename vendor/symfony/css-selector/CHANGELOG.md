@@ -1,6 +1,14 @@
 CHANGELOG
 =========
 
+<<<<<<< HEAD
+=======
+6.3
+-----
+
+ * Add support for `:scope`
+
+>>>>>>> refs/remotes/origin/devasmin
 4.4.0
 -----
 

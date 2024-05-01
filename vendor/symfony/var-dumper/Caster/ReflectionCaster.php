@@ -42,7 +42,11 @@ class ReflectionCaster
 
         $a = static::castFunctionAbstract($c, $a, $stub, $isNested, $filter);
 
+<<<<<<< HEAD
         if (!str_contains($c->name, '{closure}')) {
+=======
+        if (!str_contains($c->name, '{closure')) {
+>>>>>>> refs/remotes/origin/devasmin
             $stub->class = isset($a[$prefix.'class']) ? $a[$prefix.'class']->value.'::'.$c->name : $c->name;
             unset($a[$prefix.'class']);
         }
@@ -116,10 +120,23 @@ class ReflectionCaster
 
     public static function castAttribute(\ReflectionAttribute $c, array $a, Stub $stub, bool $isNested)
     {
+<<<<<<< HEAD
         self::addMap($a, $c, [
             'name' => 'getName',
             'arguments' => 'getArguments',
         ]);
+=======
+        $map = [
+            'name' => 'getName',
+            'arguments' => 'getArguments',
+        ];
+
+        if (\PHP_VERSION_ID >= 80400) {
+            unset($map['name']);
+        }
+
+        self::addMap($a, $c, $map);
+>>>>>>> refs/remotes/origin/devasmin
 
         return $a;
     }
@@ -362,7 +379,11 @@ class ReflectionCaster
                     if (!$type instanceof \ReflectionNamedType) {
                         $signature .= $type.' ';
                     } else {
+<<<<<<< HEAD
                         if (!$param->isOptional() && $param->allowsNull() && 'mixed' !== $type->getName()) {
+=======
+                        if ($param->allowsNull() && 'mixed' !== $type->getName()) {
+>>>>>>> refs/remotes/origin/devasmin
                             $signature .= '?';
                         }
                         $signature .= substr(strrchr('\\'.$type->getName(), '\\'), 1).' ';

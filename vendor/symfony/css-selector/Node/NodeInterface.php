@@ -21,11 +21,18 @@ namespace Symfony\Component\CssSelector\Node;
  *
  * @internal
  */
+<<<<<<< HEAD
 interface NodeInterface
+=======
+interface NodeInterface extends \Stringable
+>>>>>>> refs/remotes/origin/devasmin
 {
     public function getNodeName(): string;
 
     public function getSpecificity(): Specificity;
+<<<<<<< HEAD
 
     public function __toString(): string;
+=======
+>>>>>>> refs/remotes/origin/devasmin
 }

@@ -30,7 +30,11 @@ use Symfony\Component\CssSelector\Parser\ParserInterface;
  */
 class Translator implements TranslatorInterface
 {
+<<<<<<< HEAD
     private $mainParser;
+=======
+    private ParserInterface $mainParser;
+>>>>>>> refs/remotes/origin/devasmin
 
     /**
      * @var ParserInterface[]
@@ -48,7 +52,11 @@ class Translator implements TranslatorInterface
     private array $pseudoClassTranslators = [];
     private array $attributeMatchingTranslators = [];
 
+<<<<<<< HEAD
     public function __construct(ParserInterface $parser = null)
+=======
+    public function __construct(?ParserInterface $parser = null)
+>>>>>>> refs/remotes/origin/devasmin
     {
         $this->mainParser = $parser ?? new Parser();
 
@@ -87,9 +95,12 @@ class Translator implements TranslatorInterface
         return sprintf('concat(%s)', implode(', ', $parts));
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> refs/remotes/origin/devasmin
     public function cssToXPath(string $cssExpr, string $prefix = 'descendant-or-self::'): string
     {
         $selectors = $this->parseSelectors($cssExpr);
@@ -106,9 +117,12 @@ class Translator implements TranslatorInterface
         return implode(' | ', $selectors);
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> refs/remotes/origin/devasmin
     public function selectorToXPath(SelectorNode $selector, string $prefix = 'descendant-or-self::'): string
     {
         return ($prefix ?: '').$this->nodeToXPath($selector);
@@ -220,7 +234,11 @@ class Translator implements TranslatorInterface
         foreach ($this->shortcutParsers as $shortcut) {
             $tokens = $shortcut->parse($css);
 
+<<<<<<< HEAD
             if (!empty($tokens)) {
+=======
+            if ($tokens) {
+>>>>>>> refs/remotes/origin/devasmin
                 return $tokens;
             }
         }

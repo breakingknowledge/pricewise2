@@ -26,7 +26,11 @@ class ElementNode extends AbstractNode
     private ?string $namespace;
     private ?string $element;
 
+<<<<<<< HEAD
     public function __construct(string $namespace = null, string $element = null)
+=======
+    public function __construct(?string $namespace = null, ?string $element = null)
+>>>>>>> refs/remotes/origin/devasmin
     {
         $this->namespace = $namespace;
         $this->element = $element;
@@ -42,9 +46,12 @@ class ElementNode extends AbstractNode
         return $this->element;
     }
 
+<<<<<<< HEAD
     /**
      * {@inheritdoc}
      */
+=======
+>>>>>>> refs/remotes/origin/devasmin
     public function getSpecificity(): Specificity
     {
         return new Specificity(0, 0, $this->element ? 1 : 0);

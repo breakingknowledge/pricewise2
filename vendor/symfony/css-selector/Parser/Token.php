@@ -68,7 +68,11 @@ class Token
             return false;
         }
 
+<<<<<<< HEAD
         if (empty($values)) {
+=======
+        if (!$values) {
+>>>>>>> refs/remotes/origin/devasmin
             return true;
         }
 
